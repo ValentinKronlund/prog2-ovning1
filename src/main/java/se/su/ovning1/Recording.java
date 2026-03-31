@@ -30,6 +30,6 @@ public abstract class Recording extends Item implements PriceableWithVAT25{
 
     @Override
     public String toString(){
-        return "name=%s, artist=%s, year=%d, condition=%d, original price=%.2f, price=%.2f, price+vat=%.2f".formatted(getName(), artist, year, condition, price, getPrice(), getPriceWithVat());
+        return "name=%s, artist=%s, year=%d, condition=%d, original price=%.2f, price=%.2f, price+vat=%.2f".formatted(getName(), artist, year, condition, price, getPrice(), getPriceWithVAT());
     }
 }
