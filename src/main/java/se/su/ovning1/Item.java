@@ -1,6 +1,6 @@
 package se.su.ovning1;
 
-abstract class Item implements Priceable{
+public abstract class Item implements Priceable{
     private final String name;
 
     protected Item (String name){
@@ -9,3 +9,4 @@ abstract class Item implements Priceable{
 
     public String getName(){return this.name;}
 }
+

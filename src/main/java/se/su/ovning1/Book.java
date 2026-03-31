@@ -5,26 +5,26 @@ public class Book extends Item implements PriceableWithVAT6{
     private final boolean bound;
     private final double price;
     private final double boundCostMultiplier = 1.3;
-    
 
-    Book(String name, String author, double price, boolean bound){
+
+    public Book(String name, String author, double price, boolean bound){
         super(name);
         this.author = author;
         this.bound = bound;
         this.price = bound ? price * boundCostMultiplier : price;
     }
 
-    public String getType(){return "Book";}
+//    public String getType(){return "Book";}
 
 
     @Override
     public double getPrice(){return this.price;}
-    public boolean getBound(){return this.bound;}
-    public String getAuthor(){return this.author;}
+//    public boolean getBound(){return this.bound;}
+//    public String getAuthor(){return this.author;}
 
 
     @Override
     public String toString(){
-        return "Book: '%s', by author '%s' costs '%.2f'. Bound: %b".formatted(getName(), author, price, bound);
+        return "Book: name='%s', author='%s', bound=%b, price=%.1f, price+vat=%.1f".formatted(getName(), author, bound, price, getPriceWithVAT());
     }
 }
